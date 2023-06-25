@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Welcome</title>
+</head>
+<body class="SARbody">
+    <nav>
+        <div class="logo">Riz Designs</div>
+        <div class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Products</a>
+                <ul>
+                    <li><a href="airflowconvertor.html">Airflow Convertor</a></li>
+                    <li><a href="#">Grilles</a>
+                    <ul>
+                        <li><a href="#">SAR</a></li>
+                        <li><a href="#">SAG</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><a href="#">Product Testing</a></li>
+                <li><a href="#">Product Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="SARhead">
+        <h2>SAR Performance details</h2>
+        <p> --Double Deflection Register with damper</p>
+    </div>
+    <div class="SARform">
+        <div class="input">
+            <div>
+                <h2>INPUT</h2>    
+            </div>
+            <div class="in1">
+                <label for="airflow">Enter Airflow in CFM</label><br>
+                <input type="text" name="Airflow" id="airflow" placeholder="Airflow in CFM">
+            </div>
+            <div class="in1">
+                <label for="width">Enter width in mm</label><br>
+                <input type="text" name="width" id="width" placeholder="Width in mm">
+            </div>
+            <div class="in1">
+                <label for="height">Enter height in mm</label><br>
+                <input type="text" class="height" id="height" placeholder="Height in mm">
+            </div>
+            <div class="in1">
+                <input type="button" value="Calculate" class="airflowbtn" onclick="calculate()">
+            </div>
+            <div class="in1">
+                <input type="button" value="Refresh" class="airflowbtn">
+            </div>
+        </div>
+        <div class="output">
+            <div class="model">
+                <H2>Model: SAR-FH-RV-DD</H2>
+            </div>
+            <div>
+                <div class="out">
+                    <p>Neck size: </p>
+                    <p class="result" id="neckSize"></p>
+                    <p>mm</p>
+                </div>
+                <div class="out">
+                    <p>Blade Orientation: </p>
+                    <p class="result" id="bladeOrientation">0</p>
+                    <p>deg</p>
+                </div>
+                <div class="out">
+                    <p>Core Area: </p>
+                    <p class="result" id="coreArea"></p>
+                    <p>sq.ft</p>
+                </div>
+                <div class="out">
+                    <p>Core Velocity: </p>
+                    <p class="result" id="coreVelocity"></p>
+                    <p>FPM</p>
+                </div>
+                <div class="out">
+                    <p>Free Area: </p>
+                    <p class="result" id="freeArea"></p>
+                    <p>sq.ft</p>
+                </div>
+                <div class="out">
+                    <p>Free Area Velocity: </p>
+                    <p class="result" id="freeAreaVelocity"></p>
+                    <p>FPM</p>
+                </div>
+                <div class="out">
+                    <p>Total Pressure: </p>
+                    <p class="result" id="totalPressure"></p>
+                    <p>Pa</p>
+                </div> 
+                <div class="out">
+                    <p>Throw @50FPM</p>
+                    <p class="result" id="throw1"></p>
+                    <p>ft</p>
+                </div>
+                <div class="out">
+                    <p>Throw @150FPM</p>
+                    <p class="result" id="throw2"></p>
+                    <p>ft</p>
+                </div>
+                <div class="out">
+                    <p>NC: </p>
+                    <p class="result" id="nc"></p>
+                    <p>NC</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

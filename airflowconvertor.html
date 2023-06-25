@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Convert Airflow</title>
+</head>
+<body class="airflowbody">
+    <nav>
+        <div class="logo">Riz Designs</div>
+        <div class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Products</a>
+                <ul>
+                    <li><a href="airflowconvertor.html">Airflow Convertor</a></li>
+                    <li><a href="#">Grilles</a>
+                    <ul>
+                        <li><a href="SAR.html">SAR</a></li>    
+                        <li><a href="#">SAG</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><a href="#">Product Testing</a></li>
+                <li><a href="#">Product Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="airflowConvertor">
+        <div class="airflowintro">
+            <p> <span><h2>Introduction:</h2></span><br>
+                Welcome to the Airflow Unit Converter! This tool allows you to easily convert airflow values between different units used in the HVAC industry. Whether you're working with cubic feet per minute (CFM), cubic meters per hour (m³/s), or liters per second (L/s), this converter has you covered. Simply input your airflow value, select the current unit, choose the desired unit for conversion, and let the tool do the rest!  </p>
+        </div>
+        <div class="airflowHead">
+            <h2>Airflow Convertor</h2>
+        </div>
+        <div class="airflowformdiv">
+            <div class="airflowform">
+                <div>
+                    <label for="CFM">Enter Airflow in CFM </label> <br>
+                    <input type="text" name="Airflow" id="CFM" placeholder="Airflow (CFM)" onblur="calculateAirflow()">
+                </div>
+                <br>
+                <div>
+                    <label for="LPS">Enter Airflow in LPS </label><br>
+                    <input type="text" id="LPS" placeholder="Airflow (LPS)" onblur="calculateAirflow()">
+                </div>
+                <br>
+                <div>
+                    <label for="m3/s">Enter Airflow in cu.m.s</label><br>
+                    <input type="text" name="m3/s" id="m3s" placeholder="Airflow m3/s" onblur="calculateAirflow()">
+                </div>
+                <div>
+                    <input type="button" value="Refresh" onclick="resetFields()" class="airflowbtn">
+                </div>
+            </div>
+            <div>
+                <p>
+                    <h3>Instructions:</h3> <br>
+
+                    1. Enter the airflow value you want to convert in the input field. <br>
+                    2. Press TAB in your keyboard for the result. <br>
+                        <br>
+                        <br>
+                    <p class="notes">If you need to perform another conversion, simply clear the input field by clicking refresh and repeat the process.</p>  
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Disclaimer:
+            This conversion tool provides approximate conversions and should be used for reference purposes only. Always double-check the converted values for accuracy and consult official conversion references when needed.
+            
+            Feel free to customize and expand upon this content based on your specific requirements.</p>
+    </footer>
+</body>
+</html>
