@@ -38,36 +38,36 @@
         </div>
     </nav>
     <div class="SARhead">
-        <h2>SAR Performance details</h2>
+        <h2>SAG Performance details</h2>
         <p> --Double Deflection Register with damper</p>
     </div>
-    <div class="SARform" id="form">
+    <div class="SARform">
         <div class="input">
             <div>
                 <h2>INPUT</h2>    
             </div>
-            <div class="in1" id="form">
+            <div class="in1">
                 <label for="airflow">Enter Airflow in CFM</label><br>
                 <input type="text" name="Airflow" id="airflow" placeholder="Airflow in CFM">
             </div>
-            <div class="in1" id="form">
+            <div class="in1">
                 <label for="width">Enter width in mm</label><br>
                 <input type="text" name="width" id="width" placeholder="Width in mm">
             </div>
-            <div class="in1" id="form">
+            <div class="in1">
                 <label for="height">Enter height in mm</label><br>
                 <input type="text" class="height" id="height" placeholder="Height in mm">
             </div>
             <div class="in1">
-                <input type="button" value="Calculate" class="airflowbtn" onclick="calculate()">
+                <input type="button" value="Calculate" class="airflowbtn" onclick="calculateSAG()">
             </div>
             <!-- <div class="in1">
-                <input type="button" value="Refresh" onclick="resetFields1()" class="airflowbtn">
+                <input type="button" value="Refresh" onclick="resetFields()" class="airflowbtn">
             </div> -->
         </div>
         <div class="output">
             <div class="model">
-                <H2>Model: SAR-FH-RV-DD</H2>
+                <H2>Model: SAG-FH-RV-DD</H2>
             </div>
             <div>
                 <div class="out">
@@ -92,12 +92,12 @@
                 </div>
                 <div class="out">
                     <p>Free Area: </p>
-                    <p class="result" id="freeArea"></p>
+                    <p class="result" id="freeArea">N/A</p>
                     <p>sq.ft</p>
                 </div>
                 <div class="out">
                     <p>Free Area Velocity: </p>
-                    <p class="result" id="freeAreaVelocity"></p>
+                    <p class="result" id="freeAreaVelocity">N/A</p>
                     <p>FPM</p>
                 </div>
                 <div class="out">
@@ -107,12 +107,12 @@
                 </div> 
                 <div class="out">
                     <p>Throw @50FPM</p>
-                    <p class="result" id="throw1"></p>
+                    <p class="result" id="throw1">N/A</p>
                     <p>ft</p>
                 </div>
                 <div class="out">
                     <p>Throw @150FPM</p>
-                    <p class="result" id="throw2"></p>
+                    <p class="result" id="throw2">N/A</p>
                     <p>ft</p>
                 </div>
                 <div class="out">

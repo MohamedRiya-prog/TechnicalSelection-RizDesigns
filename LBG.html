@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Welcome</title>
+</head>
+<body class="SARbody">
+    <nav>
+        <div class="logo">Riz Designs</div>
+        <div class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Products</a>
+                <ul>
+                    <li><a href="airflowconvertor.html">Airflow Convertor</a></li>
+                    <li><a href="#">Grilles</a>
+                    <ul>
+                        <li><a href="SAR.html">SAR</a></li>
+                        <li><a href="SAG.html">SAG</a></li>
+                    </ul>
+                    <li><a href="LBG.html">Linear Bar Grilles</a></li>
+                    </li>
+                </ul>
+                </li>
+                <li><a href="#">Product Testing</a></li>
+                <li><a href="#">Product Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="SARhead">
+        <h2>Linear Bar Grilles</h2>
+        <p></p>
+    </div>
+    <div class="lbgform">
+        <div>
+            <h2>INPUT</h2>    
+        </div>
+        <div class="lbginput">
+            <div class="lbgin1">
+                <label for="airflow">Enter Airflow in CFM: </label>
+                <input type="text" name="Airflow" id="airflow" placeholder="Airflow in CFM">
+            </div>
+            <div class="lbgin1">
+                <label for="width">Enter width in mm: </label>
+                <input type="text" name="width" id="width" placeholder="Width in mm">
+            </div>
+            <div class="lbgin1">
+                <label for="height">Enter height in mm: </label>
+                <input type="text" class="height" id="height" placeholder="Height in mm">
+            </div>
+            <div class="lbgin2">
+                <input type="button" value="Calculate" class="lbgairflowbtn" onclick="calculatelbg()">
+            </div>
+            <!-- <div class="lbgin2">
+                <input type="button" value="Refresh" onclick="resetFields()" class="lbgairflowbtn">
+            </div> -->
+        </div>
+        <div class="lbgoutform">
+            <div>
+                <h2>OUTPUT</h2>
+            </div>
+            <div class="container">
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>SLBR-15 Deg 2way 16 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="slbr152w16pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1" id="slbr152w16throw1"></p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2" id="slbr152w16throw2"></p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="slbr152w16nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea" id="slbr152w16areaFactor"></p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>SLBR-15 Deg 1way 16 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="slbr151w16pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1" id="slbr151w16throw1"></p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2" id="slbr151w16throw2"></p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="slbr151w16nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea" id="slbr151w16areaFactor"></p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>SLBR-0 Deg 2way 16 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="slbr02w16pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1" id="slbr02w16throw1"></p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2" id="slbr02w16throw2"></p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="slbr02w16nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea" id="slbr02w16areaFactor"></p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>SLBR-30 Deg 1way 16 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="slbr301w16pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1" id="slbr301w16throw1"></p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2" id="slbr301w16throw2"></p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="slbr301w16nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea" id="slbr301w16areaFactor"></p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>SLBR-15 Deg 2way 12 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="slbr152w12pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1" id="slbr152w12throw1"></p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2" id="slbr152w12throw2"></p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="slbr152w12nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea" id="slbr152w12areaFactor"></p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>SLBR-15 Deg 1way 12 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="slbr151w12pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1" id="slbr151w12throw1"></p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2" id="slbr151w12throw2"></p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="slbr151w12nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea" id="slbr151w12areaFactor"></p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>SLBR-0 Deg 2way 12 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="slbr02w12pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1" id="slbr02w12throw1"></p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2" id="slbr02w12throw2"></p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="slbr02w12nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea" id="slbr02w12areaFactor"></p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>SLBR-30 Deg 1way 12 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="slbr301w12pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1" id="slbr301w12throw1"></p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2" id="slbr301w12throw2"></p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="slbr301w12nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea" id="slbr301w12areaFactor"></p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>RLBR-15 Deg 2way 16 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="rlbr152w16pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1">N/A</p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2">N/A</p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="rlbr152w16nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea">N/A</p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>RLBR-15 Deg 1way 16 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="rlbr151w16pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1">N/A</p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2">N/A</p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="rlbr151w16nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea">N/A</p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>RLBR-0 Deg 2way 16 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="rlbr02w16pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1">N/A</p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2">N/A</p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="rlbr02w16nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea">N/A</p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>RLBR-30 Deg 1way 16 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="rlbr301w16pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1">N/A</p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2">N/A</p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="rlbr301w16nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea">N/A</p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>RLBR-15 Deg 2way 12 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="rlbr152w12pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1">N/A</p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2">N/A</p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="rlbr152w12nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea">N/A</p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>RLBR-15 Deg 1way 12 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="rlbr151w12pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1">N/A</p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2">N/A</p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="rlbr151w12nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea">N/A</p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>RLBR-0 Deg 2way 12 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="rlbr02w12pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1">N/A</p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2">N/A</p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="rlbr02w12nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea">N/A</p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lbgoutput">
+                    <div class="model">
+                            <h5>RLBR-30 Deg 1way 12 mm Pitch</h5>
+                        <div class="out1">
+                            <p>Pressure Drop</p>
+                            <p class="pressDrop" id="rlbr301w12pressure"></p>
+                            <p>Pa</p>
+                            <p>Throw @ 50FPM</p>
+                            <p class="throw1">N/A</p>
+                            <p>Ft</p>
+                            <p>Throw @ 150FPM</p>
+                            <p class="throw2">N/A</p>
+                            <p>Ft</p>
+                            <p>Noise Level</p>
+                            <p class="nc" id="rlbr301w12nc"></p>
+                            <p>NC</p>
+                            <p>Free Area</p>
+                            <p class="freeArea">N/A</p>
+                            <p>Sq.ft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

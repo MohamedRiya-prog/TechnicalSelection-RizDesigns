@@ -13,6 +13,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /***************** INDEX PAGE CSS *********************/
 body {
@@ -22,6 +25,9 @@ body {
 nav {
     background: var(--CharcoalGray);
     color: var(--Off-White);
+    position: fixed;
+    width: 100vw;
+    z-index: 99;
 }
 nav::after {
     content: '';
@@ -124,7 +130,7 @@ nav ul ul ul li {
 .airflowHead {
     position: relative;
     display: flex;
-    top: 10px;
+    top: 80px;
     height: 100px;
     background-color: var(--CoolGray);
     color: var(--Off-White);
@@ -136,7 +142,7 @@ nav ul ul ul li {
     display:grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
-    top: 30px;
+    top: 100px;
     align-items: center;
     padding: 40px 100px 40px 100px;
 }
@@ -174,6 +180,8 @@ input[type=text]{
 }
 .airflowintro {
     padding: 10px;
+    position: relative;
+    top: 60px;
 }
 .airflowintro {
     font-size: 0.75rem;
@@ -201,7 +209,7 @@ footer {
     align-items: center;
     background-color: var(--CoolGray);
     position: relative;
-    top: 30px;
+    top: 100px;
     height: 100px;
     font-weight: 600;
     color: var(--Off-White);
@@ -213,7 +221,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
-    top: 80px;
+    top: 140px;
     margin-left: 40px;
     margin-right: 40px;
 }
@@ -244,4 +252,60 @@ footer {
 }
 .result {
     font-weight: 600;
+}
+
+/***************** LBG CALCULATION PAGE CSS *********************/
+
+.lbgform {
+    position: relative;
+    top: 140px;
+    margin-left: 30px;
+}
+.lbginput {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 20px;
+}
+.lbginput label {
+    font-weight: 300;
+    font-size: 14px;
+}
+.lbgin2 {
+    background-color: var(--CharcoalGray);
+    line-height: 30px;
+    text-align: center;
+    margin: 0px 10px;
+}
+.lbgairflowbtn {
+    background-color: var(--CharcoalGray);
+    color: var(--LightGray);
+}
+
+.lbgoutform {
+    position: relative;
+    top: 30px;
+}
+.lbgoutput {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid var(--CharcoalGray);
+    border-radius: 20px;
+}
+.lbgoutput h5 {
+    margin: 15px 0px;
+}
+.out1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 14px;
+    margin: 10px;
+}
+.out1 p {
+    padding: 5px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 30px;
+    column-gap: 10px;
 }
